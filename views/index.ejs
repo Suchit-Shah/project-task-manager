@@ -9,7 +9,7 @@
 <body>
     <div class="bar">
         <h1>TaskBoard</h1>
-        <form action="http://localhost:8000/projects/new">
+        <form action="/projects/new">
             <button class="nbtn">+ New Project</button>
         </form>
     </div>
@@ -18,7 +18,7 @@
             <div class="card">
                 <div class="tname">
                     <h3>
-                        <a href="http://localhost:8000/projects/<%=project.id%>"><%=project.name%></a>
+                        <a href="/projects/<%=project.id%>"><%=project.name%></a>
                     </h3>
                 </div>
                 <div class="progress">

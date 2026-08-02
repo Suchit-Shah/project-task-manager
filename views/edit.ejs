@@ -10,20 +10,20 @@
 <body>
     <div class="bar">
         <div class="icon">
-            <a href="http://localhost:8000/projects/<%=project.id%>">
+            <a href="/projects/<%=project.id%>">
                 <i class="fa-solid fa-arrow-left"></i>
             </a>
         </div>
         <div class="head">
             <h1><%=task.title%></h1>
         </div>
-        <form method="post" action="http://localhost:8000/projects/<%=project.id%>/tasks/<%=task.id%>?_method=DELETE">
+        <form method="post" action="/projects/<%=project.id%>/tasks/<%=task.id%>?_method=DELETE">
             <button class="dbtn">
                 Delete Task
             </button>
         </form>
     </div>
-    <form class="form" method="post" action="http://localhost:8000/projects/<%=project.id%>/tasks/<%=task.id%>?_method=PUT">
+    <form class="form" method="post" action="/projects/<%=project.id%>/tasks/<%=task.id%>?_method=PUT">
         <h3>Edit Task</h3>
         <div class="input">
             <input type="text" value="<%=task.title%>" name="title" class="title">
@@ -39,7 +39,7 @@
             <a>
                 <button class="submit" type="submit">Save</button>
             </a>
-            <a href="http://localhost:8000/projects/<%=project.id%>">
+            <a href="/projects/<%=project.id%>">
                 <button class="cancel" type="button">Cancel</button>
             </a>
         </div>

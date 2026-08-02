@@ -10,14 +10,14 @@
 <body>
     <div class="bar">
         <div class="icon">
-            <a href="http://localhost:8000/projects">
+            <a href="/projects">
                 <i class="fa-solid fa-arrow-left"></i>
             </a>
         </div>
         <div class="head">
             <h1><%=project.name%></h1>
         </div>
-        <form method="post" action="http://localhost:8000/projects/<%=project.id%>?_method=DELETE">
+        <form method="post" action="/projects/<%=project.id%>?_method=DELETE">
             <button class="dbtn">
                 Delete Project
             </button>
@@ -29,13 +29,13 @@
                 <p>
                     Filter:
                 </p>
-                <a href="http://localhost:8000/projects/<%=project.id%>?filter=all&sortPriority=<%=sortPriority?'1':''%>&sortDate=<%=sortDate?'1':''%>">
+                <a href="/projects/<%=project.id%>?filter=all&sortPriority=<%=sortPriority?'1':''%>&sortDate=<%=sortDate?'1':''%>">
                     <div class="btn <%=filter == 'all' ? 'active' : ''%>">All</div>
                 </a>
-                <a href="http://localhost:8000/projects/<%=project.id%>?filter=done&sortPriority=<%=sortPriority?'1':''%>&sortDate=<%=sortDate?'1':''%>">
+                <a href="/projects/<%=project.id%>?filter=done&sortPriority=<%=sortPriority?'1':''%>&sortDate=<%=sortDate?'1':''%>">
                     <div class="btn <%=filter == 'done' ? 'active' : ''%>">Done</div>
                 </a>
-                <a href="http://localhost:8000/projects/<%=project.id%>?filter=undone&sortPriority=<%=sortPriority?'1':''%>&sortDate=<%=sortDate?'1':''%>">
+                <a href="/projects/<%=project.id%>?filter=undone&sortPriority=<%=sortPriority?'1':''%>&sortDate=<%=sortDate?'1':''%>">
                     <div class="btn <%=filter == 'undone' ? 'active' : ''%>">Not done</div>
                 </a>
             </div>
@@ -60,7 +60,7 @@
         <div class="tasks">
             <%for(task of ftasks){%>
             <div class="task">
-                <form method="post" action="http://localhost:8000/projects/<%=project.id%>/tasks/<%=task.id%>/toggle?_method=PATCH">
+                <form method="post" action="/projects/<%=project.id%>/tasks/<%=task.id%>/toggle?_method=PATCH">
                     <input type="checkbox" name="check" class="check" <%= task.done ? "checked" : "" %> onchange="this.form.submit()">
                 </form>
                 <p class="name <%= task.done ? 'done' : '' %>">
@@ -72,10 +72,10 @@
                 <div class="due">
                     <%=task.dueDate%>
                 </div>
-                <a href="http://localhost:8000/projects/<%=project.id%>/tasks/<%=task.id%>/edit">
+                <a href="/projects/<%=project.id%>/tasks/<%=task.id%>/edit">
                     <i class="fa-solid fa-pen edit" style="font-size: 14px;"></i>
                 </a>
-                <form method="post" action="http://localhost:8000/projects/<%=project.id%>/tasks/<%=task.id%>?_method=DELETE">
+                <form method="post" action="/projects/<%=project.id%>/tasks/<%=task.id%>?_method=DELETE">
                     <button>
                         <i class="fa-solid fa-trash delete"></i>
                     </button>
@@ -83,7 +83,7 @@
             </div>
             <%}%>
         </div>
-        <form class="form" method="post" action="http://localhost:8000/projects/<%=project.id%>/tasks">
+        <form class="form" method="post" action="/projects/<%=project.id%>/tasks">
             <h3>Add a Task</h3>
             <div class="input">
                 <input type="text" placeholder="Title" name="title" class="title">
