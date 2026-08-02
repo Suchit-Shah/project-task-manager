@@ -1,0 +1,325 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(18, 18, 18);
+    color: rgb(240, 240, 242);
+
+    height: 100%;
+    width: 100%;
+}
+
+.bar{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    background-color: rgb(26, 28, 38);
+
+    padding: 24px;
+}
+
+.icon a i{
+    color: rgb(240, 240, 242);
+    font-size: 24px;
+}
+
+.icon a i:hover{
+    cursor: pointer;
+    color: rgb(124, 140, 240);
+}
+
+.head{
+    flex: 1;
+}
+
+.dbtn{
+    background-color: rgb(224, 92, 92);
+    color: rgb(26, 28, 38);
+
+    border: 0;
+    border-radius: 8px;
+
+    text-align: center;
+
+    padding: 10px 40px;
+}
+
+.dbtn:hover{
+    cursor: pointer;
+    color: rgb(240, 240, 242);
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    padding: 32px;
+}
+
+.snf, .f, .s, .tasks, .task{
+    display: flex;
+    align-items: center;
+}
+
+.snf{
+    gap: 12px;
+
+    background-color: rgb(26, 28, 38);
+    color: rgb(154, 154, 162);
+
+    border: 1px solid rgb(51, 51, 61);
+    border-radius: 8px;
+
+    padding: 12px 24px;
+}
+
+.f{
+    flex-basis: 55%;
+}
+
+.s{
+    flex-basis: 45%;
+    justify-content: flex-end;
+}
+
+.f a, .s a{
+    text-decoration: none;
+
+    max-width: 175px;
+    min-width: 100px;
+    width: 100%;
+}
+
+.f, .s{
+    gap: 12px;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(51, 51, 61);
+    color: rgb(154, 154, 162);
+
+    border-radius: 8px;
+
+    padding: 8px 0;
+}
+
+.btn:hover{
+    cursor: pointer;
+    color: rgb(124, 140, 240);
+    outline: 1px solid rgb(124, 140, 240);
+}
+
+.btn.active {
+    border-color: rgb(124, 140, 240);
+    color: rgb(124, 140, 240);
+}
+
+.btn i{
+    margin-top: -8px;
+}
+
+.tasks{
+    flex-direction: column;
+    gap: 12px;
+}
+
+.task{
+    gap: 12px;
+
+    background-color: rgb(26, 28, 38);
+    color: rgb(154, 154, 162);
+
+    border: 1px solid rgb(51, 51, 61);
+    border-radius: 8px;
+
+    width: 100%;
+
+    padding: 12px 24px;
+}
+
+.task a{
+    color: rgb(154, 154, 162);
+}
+
+.task form button{
+    background-color: rgb(26, 28, 38);
+    color: rgb(154, 154, 162);
+    border: 0;
+}
+
+.check{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    outline: 1px solid rgb(240, 240, 242);
+    background-color: rgb(26, 28, 38);
+    cursor: pointer;
+    position: relative;
+    vertical-align: middle;
+}
+
+.check:checked{
+    outline: 0;
+}
+
+.check:checked::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 4px;
+    width: 3px;
+    height: 6px;
+    border: solid rgb(240, 240, 242);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.name.done {
+    text-decoration: line-through;
+    color: rgb(102, 102, 112);
+}
+
+.task p{
+    flex: 1;
+    color: rgb(240, 240, 242);
+}
+
+.common{
+    border-radius: 16px;
+    text-align: center;
+
+    width: 48px;
+    padding: 4px;
+}
+
+.high{
+    background-color: rgb(74, 35, 35);
+    color: rgb(232, 138, 138);
+}
+
+.mid{
+    background-color: rgb(74, 63, 31);
+    color: rgb(224, 197, 107);
+}
+
+.low{
+    background-color: rgb(32, 64, 42);
+    color: rgb(127, 206, 151);
+}
+
+.edit:hover{
+    cursor: pointer;
+    color: rgb(124, 140, 240);
+}
+
+.delete:hover{
+    cursor: pointer;
+    color: rgb(224, 92, 92);
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-self: flex-end;
+
+    background-color: rgb(26, 28, 38);
+
+    border: 1px solid rgb(51, 51, 61);
+    border-radius: 8px;
+
+    width: 100%;
+    padding: 24px;
+}
+
+.input{
+    display: flex;
+    gap: 12px;
+}
+
+.input input{
+    background-color: rgb(18, 18, 18);
+    color: rgb(102, 102, 112);
+
+    border: 1px solid rgb(51, 51, 61);
+    border-radius: 8px;
+    
+    padding: 12px;
+}
+
+.input input:hover{
+    color: rgb(240, 240, 242);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+.input select{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: rgb(18, 18, 18);
+    border: 1px solid rgb(51, 51, 61);
+    border-radius: 8px;
+    color: rgb(102, 102, 112);
+    padding: 12px;
+    cursor: pointer;
+}
+
+.title{
+    flex: 1;
+}
+
+.date, .priority{
+    flex: 0.5;
+}
+
+.add{
+    background-color: rgb(124, 140, 240);
+    color: rgb(26, 28, 38);
+
+    border: 0;
+    border-radius: 8px;
+    
+    width: 128px;
+    padding: 12px;
+}
+
+.add:hover{
+    cursor: pointer;
+    color: rgb(240, 240, 242);
+}
+
+form p{
+    font-size: 12px;
+    color: 	rgb(232, 138, 138);
+}
+
+@media (width<832px){
+    .s{
+        align-self: flex-start;
+    }
+    .f, .s{
+        flex-direction: column;
+        flex-basis: 50%;
+    }
+}
+
+@media (width<536px){
+    .input{
+        flex-direction: column;
+    }
+}

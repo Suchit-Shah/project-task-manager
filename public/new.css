@@ -1,0 +1,133 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: rgb(240, 240, 242);
+
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(18, 18, 18);
+
+    height: 100%;
+    width: 100%;
+}
+
+.bar{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    background-color: rgb(26, 28, 38);
+
+    padding: 24px;
+    margin-bottom: 48px;
+}
+
+.icon a i{
+    font-size: 24px;
+}
+
+.icon a i:hover{
+    cursor: pointer;
+    color: rgb(124, 140, 240);
+}
+
+.bar h1{
+    flex: 1;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    background-color: rgb(26, 28, 38);
+
+    border: 1px solid rgb(51, 51, 61);
+    border-radius: 8px;
+
+    height: 296px;
+    max-width: 512px;
+    width: 100%;
+    padding: 20px;
+    margin: 24px;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+}
+
+.project{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 8px;
+}
+
+.name{
+    color: rgb(154, 154, 162);
+}
+
+input{
+    background-color: rgb(18, 18, 18);
+    color: rgb(102, 102, 112);
+
+    border: 1px solid rgb(51, 51, 61);
+    border-radius: 8px;
+    
+    width: 100%;
+    padding: 12px;
+}
+
+input:focus{
+    color: rgb(240, 240, 242);
+}
+
+.btns{
+    display: flex;
+    gap: 20px;
+}
+
+a{
+    flex-basis: 50%;
+}
+
+.btn{
+    border-radius: 8px;
+    width: 100%;
+    padding: 12px 0;
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+.p{
+    background-color: rgb(124, 140, 240);
+    color: rgb(26, 28, 38);
+    border: 0;
+}
+
+.p:hover{
+    color: rgb(240, 240, 242);
+}
+
+.c{
+    background-color: rgb(26, 28, 38);
+    color: rgb(154, 154, 162);
+    border: 1px solid rgb(154, 154, 162);
+}
+
+.c:hover{
+    background-color: rgb(18, 18, 18);
+}
+
+p{
+    font-size: 12px;
+    color: 	rgb(232, 138, 138);
+    margin-top: -20px;
+}

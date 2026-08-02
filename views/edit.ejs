@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Task</title>
+    <link rel="stylesheet" href="/edit.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+</head>
+<body>
+    <div class="bar">
+        <div class="icon">
+            <a href="http://localhost:8000/projects/<%=project.id%>">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+        </div>
+        <div class="head">
+            <h1><%=task.title%></h1>
+        </div>
+        <form method="post" action="http://localhost:8000/projects/<%=project.id%>/tasks/<%=task.id%>?_method=DELETE">
+            <button class="dbtn">
+                Delete Task
+            </button>
+        </form>
+    </div>
+    <form class="form" method="post" action="http://localhost:8000/projects/<%=project.id%>/tasks/<%=task.id%>?_method=PUT">
+        <h3>Edit Task</h3>
+        <div class="input">
+            <input type="text" value="<%=task.title%>" name="title" class="title">
+            <input type="date" name="date" class="date" value="<%=task.dueDate%>">
+            <select name="priority" id="priority" class="priority">
+                <option value="<%=task.priority%>" selected hidden><%=task.priority%></option>
+                <option value="high">high</option>
+                <option value="mid">mid</option>
+                <option value="low">low</option>
+            </select>
+        </div>
+        <div class="btn">
+            <a>
+                <button class="submit" type="submit">Save</button>
+            </a>
+            <a href="http://localhost:8000/projects/<%=project.id%>">
+                <button class="cancel" type="button">Cancel</button>
+            </a>
+        </div>
+        <%if(errorMsg){%>
+            <p>
+                <i class="fa-solid fa-triangle-exclamation" style="color: rgb(232, 138, 138)"></i>&nbsp;
+                <%=errorMsg%>
+            </p>
+        <%}%>
+    </form>
+</body>
+</html>

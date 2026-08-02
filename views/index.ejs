@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div class="bar">
+        <h1>TaskBoard</h1>
+        <form action="http://localhost:8000/projects/new">
+            <button class="nbtn">+ New Project</button>
+        </form>
+    </div>
+    <%for(project of projects){%>
+        <div class="tasks">
+            <div class="card">
+                <div class="tname">
+                    <h3>
+                        <a href="http://localhost:8000/projects/<%=project.id%>"><%=project.name%></a>
+                    </h3>
+                </div>
+                <div class="progress">
+                    <div class="pbar">
+                        <div class="pbnum" style="width: <%=project.percent%>%"></div>
+                    </div>
+                    <div class="pnum">
+                        <%=project.done%>/<%=project.total%> tasks completed
+                    </div>
+                </div>
+            </div>
+        </div>
+    <%}%>
+</body>
+</html>

@@ -1,0 +1,177 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+
+    color: rgb(240, 240, 242);
+    background-color: rgb(18, 18, 18);
+
+    height: 100vh;
+    width: 100vw;
+
+    padding: 0 24px;
+}
+
+.bar{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    background-color: rgb(26, 28, 38);
+
+    padding: 24px;
+    margin: 0 -24px;
+}
+
+.icon a i{
+    color: rgb(240, 240, 242);
+    font-size: 24px;
+}
+
+.icon a i:hover{
+    cursor: pointer;
+    color: rgb(124, 140, 240);
+}
+
+.head{
+    flex: 1;
+}
+
+.dbtn{
+    background-color: rgb(224, 92, 92);
+    color: rgb(26, 28, 38);
+
+    border: 0;
+    border-radius: 8px;
+
+    text-align: center;
+
+    padding: 10px 40px;
+}
+
+.dbtn:hover{
+    cursor: pointer;
+    color: rgb(240, 240, 242);
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-self: center;
+
+    background-color: rgb(26, 28, 38);
+    border: 1px solid rgb(51, 51, 61);
+    border-radius: 8px;
+
+    max-width: 632px;
+    width: 100%;
+
+    padding: 24px;
+    margin: 24px;
+}
+
+.input{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.input input{
+    background-color: rgb(18, 18, 18);
+    color: rgb(102, 102, 112);
+
+    border: 1px solid rgb(51, 51, 61);
+    border-radius: 8px;
+
+    padding: 12px;
+}
+
+.input input:hover{
+    color: rgb(240, 240, 242);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+.input select{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background-color: rgb(18, 18, 18);
+    color: rgb(102, 102, 112);
+
+    border: 1px solid rgb(51, 51, 61);
+    border-radius: 8px;
+
+    padding: 12px;
+    cursor: pointer;
+}
+
+.title{
+    flex: 1;
+}
+
+.date, .priority{
+    flex: 0.5;
+}
+
+.btn{
+    display: flex;
+    gap: 24px;
+    width: 100%;
+}
+
+.btn a{
+    flex: 1;
+    width: 100%;
+}
+
+.submit{
+    background-color: rgb(124, 140, 240);
+    color: rgb(26, 28, 38);
+
+    border: 0;
+    border-radius: 8px;
+
+    width: 100%;
+
+    padding: 12px;
+}
+
+.submit:hover{
+    cursor: pointer;
+    color: rgb(240, 240, 242);
+}
+
+.cancel{
+    background-color: rgb(26, 28, 38);
+    color: rgb(102, 102, 112);
+
+    border: 1px solid rgb(102, 102, 112);
+    border-radius: 8px;
+
+    width: 100%;
+    
+    padding: 12px;
+}
+
+.cancel:hover{
+    cursor: pointer;
+    border-color: rgb(240, 240, 242);
+    color: rgb(240, 240, 242);
+}
+
+form p{
+    font-size: 12px;
+    color: 	rgb(232, 138, 138);
+}
