@@ -2,7 +2,7 @@
 
 A simple project & task manager built with Express and EJS. Organize tasks into projects, set priorities and due dates, filter and sort your task list, and track completion progress with a live progress bar.
 
-**Live demo:** [Add your Render URL here once deployed]
+**Live demo:** [https://project-task-manager-sz7p.onrender.com/projects]
 
 > Note: This is a demo project using in-memory storage (no database). Data resets whenever the server restarts, so please don't rely on it to store anything important.
 
