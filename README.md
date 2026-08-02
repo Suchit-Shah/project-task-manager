@@ -29,8 +29,8 @@ A simple project & task manager built with Express and EJS. Organize tasks into 
 
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/Suchit-Shah/project-task-manager.git
+cd project-task-manager
 
 # Install dependencies
 npm install
